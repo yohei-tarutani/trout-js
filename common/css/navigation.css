@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
+
+:root {
+  --color-dark-blue: rgba(3, 65, 103, 1);
+  --color-medium-blue: rgba(5, 118, 188, 1);
+  --color-light-blue: rgba(73, 181, 247, 1);
+  --color-background: rgba(231, 245, 255, 1);
+  --color-report-button-yellow: rgba(242, 191, 38, 1);
+  --color-error-red: rgba(189, 31, 31, 1);
+  --color-body-text: rgba(37, 37, 37, 1);
+  --color-drop-shadow: rgba(190, 190, 190, 1);
+
+  /* --fontsize-h1: clamp(18px, 2vw, 28px);
+  --fontsize-h2: clamp(16px, 2vw, 24px);
+  --fontsize-h3: clamp(14px, 2vw, 20px);
+  --fontsize-nav: clamp(14px, 1.5vw, 18px);
+  --fontsize-others: clamp(14px, 1.5vw, 20px); */
+
+  /* Iza suggestion */
+  --fontsize-h1: clamp(18px, 2vw, 24px);
+  --fontsize-h2: clamp(16px, 2vw, 20px);
+  --fontsize-h3: clamp(14px, 2vw, 18px);
+  --fontsize-nav: clamp(14px, 1.5vw, 16px);
+  --fontsize-others: clamp(14px, 1.5vw, 16px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+/* MOBILE HEADER ======================= */
+.desktop-header {
+  display: none;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1rem;
+  align-items: center;
+  box-shadow: 0px 0px 10px var(--color-drop-shadow);
+  position: fixed;
+  /* position: sticky; */
+  background-color: white;
+  z-index: 10;
+}
+
+.mobile-header .menu {
+  display: none;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+.mobile-header .open {
+  display: block;
+
+}
+
+.mobile-header .menuHamburguer {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.mobile-header .menuHamburguer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(5, 118, 188, 1);
+  box-shadow: 0 10px rgba(5, 118, 188, 1), 0 -10px var(--color-medium-blue);
+}
+
+.mobile-header .open li a {
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem 0;
+  margin: 0 1.2rem;
+  color: rgba(5, 118, 188, 1);
+  border-bottom: 0.5px solid var(--color-medium-blue);
+  /* padding-bottom: .5rem; */
+  font-size: var(--fontsize-nav);
+}
+
+.mobile-header .open li:last-of-type a {
+  border-bottom: none;
+}
+
+.mobile-header .open li a img {
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.mobile-header .open li {
+  list-style: none;
+}
+
+.mobile-header .open {
+  position: fixed;
+  right: 0.5rem;
+  top: 5.2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px var(--color-drop-shadow);
+}
+
+
+/* DESKTOP HEADER ======================= */
+
+@media screen and (min-width: 830px) {
+  main {
+    margin-top: 0rem;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  .desktop-header {
+    font-family: "PT Sans Caption", sans-serif;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    width: 110px;
+    flex-flow: column wrap;
+    gap: 4rem;
+    align-items: center;
+    /* justify-content: start; */
+    padding-left: 1rem;
+    height: 100%;
+    box-shadow: 0px 0px 10px var(--color-drop-shadow);
+    background-color: white;
+    z-index: 10;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+
+  .desktop-header a:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktop-header .logo {
+    padding-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    height: 85px;
+    align-self: center;
+  }
+
+  .desktop-header nav {
+    margin-right: 1rem;
+  }
+
+  .logout-item a img {
+    height: 24px;
+  }
+
+  .logout-item span {
+    font-size: 14px;
+  }
+
+  .desktop-header nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .desktop-header nav ul li {
+    list-style: none;
+  }
+
+  .desktop-header nav ul li a {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 3rem;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktop-header a {
+    text-decoration: none;
+    color: var(--color-medium-blue);
+    text-align: center;
+  }
+
+  /* .desktop-header a img {
+    height: 40px;
+  } */
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="use-all-space">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>trout | Report</title>
+
+  <!-- FAVICON============= -->
+  <link rel='icon' type='image/png' href='../assets/favicon.png'>
+  <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css" />
+  <link rel="stylesheet" type="text/css" href="report.css" />
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
+  <link rel="stylesheet" href="../common/css/navigation.css">
+
+  <!-- JAVASCRIPT LINK============= -->
+  <script src='../common/javascript/nav-menu.js' defer></script>
+  <script type="module" src="report.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="mobile-header">
+      <a href="../index.html">
+        <img class="logo" src="../assets/Mobile/Logo Mobile.png" alt="Logo">
+      </a>
+      <nav>
+        <div class="menuHamburguer"></div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="../nearby-hazards/nearby_hazards.html" class="feed">
+                <img src="../assets/Mobile/nearby-icon.png" alt="Nearby">
+                <span>Nearby Hazards</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user-myreports/myreports.html" class="my-reports">
+                <img src="../assets/Mobile/MyReports-Icon.png" alt="My Reports">
+                <span>My Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Mobile/Profile-icon.png" alt="Profile">
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Mobile/Logout.png" alt="Logout">
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="desktop-header">
+      <div class="nav-wrapper">
+        <a href="../index.html">
+          <img class="logo" src="../assets/Desktop/Logo Desktop.png" alt="Logo">
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="../nearby-hazards/nearby_hazards.html" class="feed">
+                <img src="../assets/Desktop/nearby-icon.png" alt="Nearby Hazards">
+                <span>Nearby Hazards</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user-myreports/myreports.html" class="my-reports">
+                <img src="../assets/Desktop/MyReports-Icon.png" alt="My Reports">
+                <span>My Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Desktop/Profile-icon.png" alt="Profile">
+                <span>Profile</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="logout-item">
+        <ul>
+          <li>
+            <a href="#" class="logout">
+              <img src="../assets/Desktop/Logout.png" alt="Logout">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="first-screen" class="wrapper">
+      <div class="progress-dots">
+        <div class="dot dark-blue"></div>
+        <div class="dot light-blue"></div>
+        <div class="dot light-blue"></div>
+      </div>
+      <h1>Provide information</h1>
+      <div class="input-field">
+        <fieldset>
+          <legend>
+            <h2>What hazard did you see?</h2>
+          </legend>
+          <div class="radio-wrapper">
+            <input type="radio" id="infrastructure" class="visually-hidden" name="type" value="Infrastructure" />
+            <label for="infrastructure">Infrastructure</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" id="flood" class="visually-hidden" name="type" value="Flood" />
+            <label for="flood">Flood</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" id="electrical" class="visually-hidden" name="type" value="Electrical" />
+            <label for="electrical">Electrical</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" id="pothole" class="visually-hidden" name="type" value="Pothole" />
+            <label for="pothole">Pothole</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" id="p_sign" class="visually-hidden" name="type" value="Signage" />
+            <label for="p_sign">Signage</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" id="other" class="visually-hidden" name="type" value="Other" />
+            <label for="other">Other</label>
+          </div>
+        </fieldset>
+
+        <div class="description">
+          <h2>Describe in detail</h2>
+          <textarea name="description" id="description" cols="60" rows="5"></textarea>
+        </div>
+
+        <div class="photo">
+          <h2>Add Photo <span>(optional)</span></h2>
+          <input type="file" id="photoUploader" />
+        </div>
+
+        <div class="address">
+          <h1>Select a Location</h1>
+          <h2>Enter the address</h2>
+          <input type="text" id="typedAddress" placeholder="Your location">
+        </div>
+
+        <div class="location">
+          <div class="section-devider">
+            <p>or</p>
+          </div>
+
+          <div class="map">
+            <h2>Pin on the map:</h2>
+            <div id="map"></div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div class="cancel-button">
+            <a href="../index.html">Cancel</a>
+          </div>
+          <button id="confirm-data" class="next-button">Next</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="second-screen" class="wrapper">
+      <div class="progress-dots">
+        <div class="dot light-blue"></div>
+        <div class="dot dark-blue"></div>
+        <div class="dot light-blue"></div>
+      </div>
+      <div class="header-wrapper">
+        <div class="back-button"></div>
+        <h1>Review your report</h1>
+      </div>
+      <div id="display-area">
+        <div class="category-second">
+          <h2>Hazard category:</h2>
+          <p id="checkedType"></p>
+        </div>
+        <div class="description-second">
+          <h2>Description:</h2>
+          <p id="checkedDescription"></p>
+        </div>
+        <div class="photo-second">
+          <h2>Photo</h2>
+          <p id="checkedPhotoName"></p>
+        </div>
+        <div class="location-second">
+          <h2>Location</h2>
+          <p id="checkedAddress"></p>
+        </div>
+        <div class="hidden-items">
+          <div id="checkedLongitude"></div>
+          <div id="checkedLatitude"></div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="submit-button">Submit</button>
+      </div>
+    </div>
+
+    <div id="third-screen" class="wrapper">
+      <div class="progress-dots">
+        <div class="dot light-blue"></div>
+        <div class="dot light-blue"></div>
+        <div class="dot dark-blue"></div>
+      </div>
+      <img class="success-logo" src="../assets/Mobile/Flash Message _ Success.png" alt="LOGO">
+      <div class="text-wrapper">
+        <h1>Report sent !</h1>
+        <h2>Please wait 3 - 7 days for an update</h2>
+        <h3>Check your report history for more details</h3>
+      </div>
+      <div class="buttons">
+        <div class="back-to-button">
+          <a href="../index.html">Back to home</a>
+        </div>
+        <div class="go-myreports-button">
+          <a href="../user-myreports/myreports.html">My Reports</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>

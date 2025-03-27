@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
+
+:root {
+  --color-dark-blue: rgba(3, 65, 103, 1);
+  --color-medium-blue: rgba(5, 118, 188, 1);
+  --color-light-blue: rgba(73, 181, 247, 1);
+  --color-background: rgba(231, 245, 255, 1);
+  --color-report-button-yellow: rgba(242, 191, 38, 1);
+  --color-error-red: rgba(189, 31, 31, 1);
+  --color-body-text: rgba(37, 37, 37, 1);
+  --color-drop-shadow: rgba(190, 190, 190, 1);
+
+  /* Initial Font Size*/
+  /* --fontsize-h1: clamp(18px, 2vw, 28px);
+  --fontsize-h2: clamp(16px, 2vw, 24px);
+  --fontsize-h3: clamp(14px, 2vw, 20px);
+  --fontsize-nav: clamp(14px, 1.5vw, 18px);
+  --fontsize-others: clamp(14px, 1.5vw, 20px); */
+
+  /* Iza suggestion */
+  --fontsize-h1: clamp(18px, 2vw, 24px);
+  --fontsize-h2: clamp(16px, 2vw, 20px);
+  --fontsize-h3: clamp(14px, 2vw, 18px);
+  --fontsize-nav: clamp(14px, 1.5vw, 16px);
+  --fontsize-others: clamp(14px, 1.5vw, 16px);
+
+  --spacing-desktop: 45px;
+  --spacing-mobile: 28px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+
+/* MAIN ======================= */
+
+body main{
+  margin-top: 0;
+}
+
+main .login-form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px 40px 40px;
+}
+
+main .login-background img {
+      max-width: 300px;
+      height: auto;
+      display: block;
+}
+
+main .login-background{
+  /* padding: 3rem; */
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+main a {
+  color: var(--color-medium-blue);
+}
+
+main h1 {
+  font-size: var(--fontsize-h1);
+  padding-top: 40px;
+}
+
+main h2 {
+  font-size: var(--fontsize-h2);
+  margin: 40px 0 24px 0;
+}
+
+main p {
+  font-size: var(--fontsize-others);
+}
+
+main .or-sign {
+  margin-top: 40px;
+}
+
+main .social-links img {
+  margin: 16px 20px 0 20px;
+}
+
+.or-sign p::before {
+  content: "";
+  display: inline-block;
+  width: 130px;
+  border-bottom: 2px solid black;
+  margin-right: 10px;
+}
+
+.or-sign p::after {
+  content: "";
+  display: inline-block;
+  width: 130px;
+  border-bottom: 2px solid black;
+  margin-left: 10px;
+}
+
+/* FORM ======================= */
+
+main a {
+  font-size: var(--fontsize-others);
+}
+
+main input::placeholder {
+  font-size: var(--fontsize-others);
+}
+
+main .wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.2rem;
+}
+
+/* LOGIN BUTTON */
+main .wrapper #login {
+  width: 250px;
+  height: 48px;
+  border-radius: 35px;
+  border: none;
+  background-color: var(--color-medium-blue);
+  color: white;
+  margin: 0 auto;
+  font-size: var(--fontsize-others);
+  cursor: pointer;
+}
+
+main .wrapper #login:active {
+  background-color: var(--color-light-blue);
+}
+
+main .wrapper label {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: var(--fontsize-others);
+}
+
+main .wrapper input {
+  width: 345px;
+  height: 40px;
+  border-radius: 35px;
+  border: 1px solid black;
+  padding-left: 1rem;
+}
+
+main .wrapper a {
+  margin: 0.2rem 0 40px 0;
+  text-align: right;
+}
+
+main .sign-up {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+main #signup {
+  margin-top: 0;
+  margin-left: 0.5rem;
+  font-size: var(--fontsize-others);
+}
+
+@media screen and (min-width: 830px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 0;
+    background-color: var(--color-background);
+    height: 100vh;
+
+  }
+
+  main h1 {
+    padding: 0;
+  }
+
+  main .login-form {
+    margin: 0;
+    background-color: white;
+    height: 100%;
+    margin-left: 45px;
+    min-width: 450px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    box-shadow: -4px 0 5px rgba(190, 190, 190, .4);
+  }
+
+  main .login-background img {
+    max-width: 90%;
+    display: block;
+    margin-left: 45px;
+  }
+
+  main .login-background {
+    justify-self: center;
+  }
+
+  .or-sign p::before {
+    width: 180px;
+  }
+
+  .or-sign p::after {
+    width: 180px;
+  }
+
+  main .wrapper input {
+    width: 364px;
+    height: 48px;
+    border-radius: 35px;
+  }
+
+  main .wrapper #login {
+    height: 56px;
+  }
+
+  main .social-links img {
+    margin-top: 16px;
+  }
+}

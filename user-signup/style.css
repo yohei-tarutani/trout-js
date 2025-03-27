@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  justify-content: center;
+}
+
+
+h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+label {
+  margin-top: 1rem;
+  width: 400px;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+input {
+  display: block;
+  height: 2rem;
+  font-size: 1.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: .5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+}
+
+button:active {
+  opacity: .5;
+}
+
+
+.signup {
+  margin-top: 3rem;
+  background-color: rgb(52, 52, 52);
+  color: white;
+}

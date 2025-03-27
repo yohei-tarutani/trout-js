@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: var(--fontsize-h1);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  font-size: var(--fontsize-h2);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: var(--fontsize-nav);
+}
+
+.progress-dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 2.5rem 0;
+}
+
+.progress-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.progress-dots .dot.dark-blue {
+  background-color: var(--color-dark-blue);
+}
+.progress-dots .dot.light-blue {
+  background-color: var(--color-light-blue);
+}
+
+/* FIRST SCREEN ==================== */
+/* BUTTON ==================== */
+.radio-wrapper:hover,
+.radio-wrapper label:hover,
+.photo input::file-selector-button:hover,
+.buttons .next-button:hover,
+.buttons .cancel-button:hover {
+  cursor: pointer;
+}
+
+fieldset,
+.description,
+.photo,
+.location,
+.buttons {
+  margin-bottom: 3rem;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.radio-wrapper {
+  border: 1px solid black;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 35px;
+  display: flex;
+  border: 1px solid #252525;
+}
+
+.radio-wrapper label {
+  flex-grow: 1;
+}
+
+.radio-wrapper:has(input:checked) {
+  background-color: var(--color-medium-blue);
+  color: white;
+}
+
+.description textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 20px;
+  resize: none;
+}
+
+.photo {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.photo h2 span {
+  font-weight: normal;
+}
+
+.photo input {
+  align-self: center;
+}
+
+.photo input::file-selector-button {
+  color: dodgerblue;
+  padding: 1rem 5rem;
+  border: thin solid grey;
+  border-radius: 35px;
+  background-color: var(--color-medium-blue);
+  color: white;
+}
+
+.address input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 35px;
+  padding: 1rem;
+  border: 1px solid #252525;
+}
+
+.section-devider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.1rem;
+}
+
+.section-devider::before {
+  content: '';
+  grid-column: 1;
+  height: 2px;
+  background-color: black;
+  margin-top: 2.6rem;
+}
+
+.section-devider::after {
+  content: '';
+  grid-column: 3;
+  height: 2px;
+  background-color: black;
+  margin-top: 2.6rem;
+}
+
+.section-devider p {
+  margin: 2rem;
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 30vh;
+  border-radius: 20px;
+}
+
+#currentMarker {
+  background-image: url(../assets/Mobile/current_location.png);
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
+}
+
+#hazardsMarker {
+  background-image: url(../assets/Mobile/Hazard\ on\ map.png);
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons .cancel-button,
+.buttons .back-to-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-medium-blue);
+  background-color: white;
+  width: 18rem;
+  height: 3rem;
+  border-radius: 35px;
+}
+
+.buttons .cancel-button a,
+.buttons .back-to-button a {
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  flex-grow: 1;
+}
+
+.buttons .next-button {
+  width: 18rem;
+  height: 3rem;
+  color: white;
+  background-color: var(--color-medium-blue);
+  border: none;
+  border-radius: 35px;
+}
+
+@media screen and (min-width: 830px) {
+  main {
+    width: calc(100% - 110px);
+  }
+
+  fieldset {
+    gap: 1rem;
+  }
+
+  .photo {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .photo h2 {
+    margin-bottom: 0;
+  }
+
+  .buttons {
+    flex-flow: row nowrap;
+  }
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#confirm {
+  margin: 1rem 0;
+}
+
+#second-screen,
+#third-screen {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px
+}
+
+/* SECOND SCREEN ==================== */
+#second-screen .header-wrapper h1 {
+  position: relative;
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.back-button {
+  content: url(../assets/Mobile/Back.png);
+  position: absolute;
+  z-index: 100;
+}
+
+.back-button:hover {
+  cursor: pointer;
+}
+
+.category-second,
+.description-second,
+.photo-second,
+.location-second {
+  margin-bottom: 2rem;
+}
+
+.category-second h2,
+.photo-second h2 {
+  margin-bottom: 0;
+}
+
+.category-second,
+.photo-second {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-second p {
+  border: 1px solid black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 35px;
+}
+
+.photo-second p{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+
+.photo-second p::after {
+  content: url(../assets/Mobile/Photo\ Updated.png);
+}
+
+.location-second {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.description-second p {
+  border: 1px solid black;
+  padding: 1rem;
+  height: 7rem;
+  border-radius: 20px;
+}
+
+.location-second h2 {
+  margin-bottom: 1rem;
+}
+
+#submit-button {
+  font-size: 1rem;
+  width: 18rem;
+  height: 3rem;
+  color: white;
+  background-color: var(--color-medium-blue);
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 830px) {
+  #second-screen .header-wrapper h1::before {
+    top: 5px;
+  }
+
+  .location-second {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  #second-screen .header-wrapper .back-button {
+    top: 5px;
+  }
+}
+
+
+
+
+/* THIRD SCREEN ==================== */
+#third-screen {
+  text-align: center;
+}
+
+#third-screen .text-wrapper {
+  margin-bottom: 5rem;
+}
+
+.success-logo {
+  margin: 5rem auto 3rem auto;
+}
+
+.buttons .go-myreports-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-medium-blue);
+  background-color: var(--color-medium-blue);
+  width: 18rem;
+  height: 3rem;
+  border-radius: 35px;
+}
+
+.buttons .go-myreports-button a {
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 830px) {
+  #third-screen .buttons {
+    flex-flow: column nowrap;
+  }
+}

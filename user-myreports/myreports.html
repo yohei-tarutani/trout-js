@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trout | My Reports</title>
+
+  <!-- FAVICON============= -->
+  <link rel='icon' type='image/png' href='../assets/favicon.png'>
+
+  <!-- STYLE LINK============= -->
+  <link rel="stylesheet" href="../common/css/navigation.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JAVASCRIPT LINK============= -->
+  <script src='../common/javascript/nav-menu.js' defer></script>
+</head>
+
+<body class="gov-bg">
+  <header>
+    <div class="mobile-header">
+      <a href="../index.html">
+        <img class="logo" src="../assets/Mobile/Logo Mobile.png" alt="Logo">
+      </a>
+      <nav>
+        <div class="menuHamburguer"></div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="../nearby-hazards/nearby_hazards.html" class="feed">
+                <img src="../assets/Mobile/nearby-icon.png" alt="Nearby">
+                <span>Nearby Hazards</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user-myreports/myreports.html" class="my-reports">
+                <img src="../assets/Mobile/MyReports-Icon.png" alt="My Reports">
+                <span>My Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Mobile/Profile-icon.png" alt="Profile">
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Mobile/Logout.png" alt="Logout">
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="desktop-header">
+      <div class="nav-wrapper">
+        <a href="../index.html">
+          <img class="logo" src="../assets/Desktop/Logo Desktop.png" alt="Logo">
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="../nearby-hazards/nearby_hazards.html" class="feed">
+                <img src="../assets/Desktop/nearby-icon.png" alt="Nearby Hazards">
+                <span>Nearby Hazards</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user-myreports/myreports.html" class="my-reports">
+                <img src="../assets/Desktop/MyReports-Icon.png" alt="My Reports">
+                <span>My Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Desktop/Profile-icon.png" alt="Profile">
+                <span>Profile</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="logout-item">
+        <ul>
+          <li>
+            <a href="#" class="logout">
+              <img src="../assets/Desktop/Logout.png" alt="Logout">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="gov-interface-wrapper">
+      <!-- <a class="return-arrow" href=""></a> -->
+      <h1>My Reports</h1>
+      <!-- <select id="statusFilter" name="statusFilter">
+        <option value="" selected>All Reports</option>
+        <option value="1_New">1_New</option>
+        <option value="2_Ongoing">2_Ongoing</option>
+        <option value="3_Denied">3_Denied</option>
+        <option value="4_Solved">4_Solved</option>
+      </select> -->
+
+      <div id="reports" class="dashboard">
+        <div id="append-div">
+          <ul class="table-header">
+            <li></li> <!--  -->
+            <li>Report ID</li> <!--  -->
+            <li>Report Date</li> <!--  -->
+            <li>Category</li> <!--  -->
+            <li>Status</li>
+            <!-- <li>Address</li> 
+            <li>Detail</li> 
+            <li>Photo</li>   -->
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- <script src="script_gov.js" type="module"></script> -->
+  <script src="myreports.js" type="module"></script>
+</body>
+
+</html>

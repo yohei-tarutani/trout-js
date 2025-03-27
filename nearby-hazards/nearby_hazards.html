@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trout | Nearby Hazards</title>
+
+  <!-- FAVICON============= -->
+  <link rel='icon' type='image/png' href='../assets/favicon.png'>
+  <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../common/css/navigation.css">
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
+  <script src='../common/javascript/nav-menu.js' defer></script>
+  <script type="module" src="nearby_hazards.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="mobile-header">
+      <a href="../index.html">
+        <img class="logo" src="../assets/Mobile/Logo Mobile.png" alt="Logo">
+      </a>
+      <nav>
+        <div class="menuHamburguer"></div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="../nearby-hazards/nearby_hazards.html" class="feed">
+                <img src="../assets/Mobile/nearby-icon.png" alt="Nearby">
+                <span>Nearby Hazards</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user-myreports/myreports.html" class="my-reports">
+                <img src="../assets/Mobile/MyReports-Icon.png" alt="My Reports">
+                <span>My Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Mobile/Profile-icon.png" alt="Profile">
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Mobile/Logout.png" alt="Logout">
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="desktop-header">
+      <div class="nav-wrapper">
+        <a href="../index.html">
+          <img class="logo" src="../assets/Desktop/Logo Desktop.png" alt="Logo">
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="../nearby-hazards/nearby_hazards.html" class="feed">
+                <img src="../assets/Desktop/nearby-icon.png" alt="Nearby Hazards">
+                <span>Nearby Hazards</span>
+              </a>
+            </li>
+            <li>
+              <a href="../user-myreports/myreports.html" class="my-reports">
+                <img src="../assets/Desktop/MyReports-Icon.png" alt="My Reports">
+                <span>My Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile">
+                <img src="../assets/Desktop/Profile-icon.png" alt="Profile">
+                <span>Profile</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="logout-item">
+        <ul>
+          <li>
+            <a href="#" class="logout">
+              <img src="../assets/Desktop/Logout.png" alt="Logout">
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="map"></div>
+
+    <div class="container">
+      <div class="header-container">
+        <h2>Recent reports near:</h2>
+        <p class="filter-button">Filter</p>
+        <div class="filter-menu">
+          <div class="upper">
+            <h3>Radius</h3>
+            <div class="distance">
+              <p>within</p>
+              <p id="sliderValueDisplay">8km</p>
+            </div>          
+          </div>
+          <input type="range" min="1" max="15" value="8" step="0.5" class="slider" id="rangeInput">
+          <div class="lower">
+            <p>1km</p>
+            <p>15km</p>
+          </div>
+        </div>
+      </div>
+      <div class="report-list"></div>
+    </div>
+  </main>
+  <div class="loader-wrapper visually-hidden">
+    <div class="loader"></div>
+  </div>
+</body>
+
+</html>

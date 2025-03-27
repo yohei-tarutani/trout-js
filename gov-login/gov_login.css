@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
+
+:root {
+  --color-dark-blue: rgba(3, 65, 103, 1);
+  --color-medium-blue: rgba(5, 118, 188, 1);
+  --color-light-blue: rgba(73, 181, 247, 1);
+  --color-background: rgba(231, 245, 255, 1);
+  --color-report-button-yellow: rgba(242, 191, 38, 1);
+  --color-error-red: rgba(189, 31, 31, 1);
+  --color-body-text: rgba(37, 37, 37, 1);
+  --color-drop-shadow: rgba(190, 190, 190, 1);
+  /* Initial Font Size*/
+  /* --fontsize-h1: clamp(18px, 2vw, 28px);
+  --fontsize-h2: clamp(16px, 2vw, 24px);
+  --fontsize-h3: clamp(14px, 2vw, 20px);
+  --fontsize-nav: clamp(14px, 1.5vw, 18px);
+  --fontsize-others: clamp(14px, 1.5vw, 20px); */
+
+  /* Iza suggestion */
+  --fontsize-h1: clamp(18px, 2vw, 24px);
+  --fontsize-h2: clamp(16px, 2vw, 20px);
+  --fontsize-h3: clamp(14px, 2vw, 18px);
+  --fontsize-nav: clamp(14px, 1.5vw, 16px);
+  --fontsize-others: clamp(14px, 1.5vw, 16px);
+
+  --spacing-desktop: 45px;
+  --spacing-mobile: 28px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+
+/* MAIN ======================= */
+
+body main {
+  margin: 0;
+}
+
+main .login-background {
+  padding: 3rem;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+main .login-form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+  gap: 0.2rem;
+}
+
+main a {
+  color: var(--color-medium-blue);
+  font-size: var(--fontsize-others);
+  align-self: flex-end;
+}
+
+main h1 {
+  font-size: var(--fontsize-h1);
+  padding-top: 40px;
+}
+
+main p {
+  font-size: var(--fontsize-others);
+}
+
+
+main input::placeholder {
+  font-size: var(--fontsize-others);
+}
+
+
+/* LOGIN BUTTON */
+main .login-form #login {
+  width: 250px;
+  height: 48px;
+  border-radius: 35px;
+  border: none;
+  background-color: var(--color-medium-blue);
+  color: white;
+  margin: 0 auto;
+  font-size: var(--fontsize-others);
+  cursor: pointer;
+  margin: 40px 0;
+}
+
+main .login-form #login:active {
+  background-color: var(--color-light-blue);
+}
+
+main .login-form label {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: var(--fontsize-others);
+  align-self: flex-start;
+  margin-top: 40px;
+}
+
+
+main .login-form input {
+  width: 345px;
+  height: 40px;
+  border-radius: 35px;
+  border: 1px solid black;
+  padding-left: 1rem;
+}
+
+main .login-form a {
+  text-align: right;
+}
+
+main .sign-up {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+main #signup {
+  padding-left: .2rem;
+}
+
+
+@media screen and (min-width: 1000px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 0;
+    background-color: var(--color-background);
+    /* height: 100vh; */
+  }
+
+  main h1 {
+    padding: 170px 0 0 0;
+  }
+
+  main .login-form {
+    margin: 0;
+    background-color: white;
+    height: 100%;
+    padding: 0 45px;
+    /* min-width: 450px; */
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  main .login-form:nth-of-type(2) {
+    box-shadow: -4px 0 5px rgba(190, 190, 190, .4);
+  }
+
+  .sign-up {
+    padding-bottom: 170px;
+  }
+
+  main .login-background img {
+    min-width: 80%;
+    display: block;
+    margin-left: 45px;
+  }
+
+  main .login-background {
+    justify-self: center;
+  }
+
+  main .login-form input {
+    width: 364px;
+    height: 48px;
+    border-radius: 35px;
+  }
+
+  main .login-form #login {
+    height: 56px;
+  }
+
+}

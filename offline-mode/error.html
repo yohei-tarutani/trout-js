@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <link rel="stylesheet" href="offline-mode/error.css">
+  <title>Document</title>
+</head>
+
+<body class="error-page">
+  <main>
+    <h1>Looks like you have <span>lost internet connection.</span></h1>
+    <div class="wrap">
+      <div id="animation-container"></div>
+      <img src="offline-mode/error.png" alt="">
+    </div>
+    <h2>Reconnect and just keep swimming.</h2>
+    <script>
+      let animation = bodymovin.loadAnimation({
+          container: document.getElementById('animation-container'),
+          path: 'offline-mode/error.json',
+          render: 'svg',
+          loop: true,
+          autoplay: true,
+          name: 'animation'
+      });
+    </script>
+  </main>
+</body>
+
+</html>

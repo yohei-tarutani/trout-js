@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trout | Government Dashboard</title>
+
+  <!-- FAVICON============= -->
+  <link rel='icon' type='image/png' href='../assets/favicon.png'>
+  <link rel="stylesheet" href="../common/css/navigation.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gov-bg">
+  <div class="gov-interface-wrapper">
+    <!-- <a class="return-arrow" href=""></a> -->
+    <h1>Reports</h1>
+    <div class="filter-changestatus">
+      <div class="filter-wrapper">
+        <span class="filter-text">Filter</span>
+        <select id="statusFilter" class="statusFilter">
+          <option value="" selected>Status</option>
+          <option value="1_New">1_New</option>
+          <option value="2_Ongoing">2_Ongoing</option>
+          <option value="3_Denied">3_Denied</option>
+          <option value="4_Solved">4_Solved</option>
+        </select>
+      </div>
+      <span class="change-status-btn">Change Status</span>
+    </div>
+
+    <div id="reports" class="dashboard">
+      <div id="append-div">
+        <ul class="table-header">
+          <li></li>
+          <li>Report ID</li>
+          <li>Report Date</li>
+          <li>Category</li>
+          <li>Status</li>
+          <!-- <li>Address</li> 
+          <li>Detail</li> 
+          <li>Photo</li>   -->
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <script src="script_gov.js" type="module"></script> -->
+  <script src="gov_dashboard.js" type="module"></script>
+</body>
+
+</html>
