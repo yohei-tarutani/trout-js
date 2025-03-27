@@ -5,7 +5,7 @@
 ![Image](https://github.com/user-attachments/assets/14279858-64e7-4e72-a70a-508ba1af03ac)
 
 ### Team Project
-This is my first team project at college which has developed during 12 weeks.
+This is my first team project at college which has developed during 13 weeks.
 I had the privilege of collaborating with a talented team of designers and developers as a front-end developer.
 
 ## Main features
