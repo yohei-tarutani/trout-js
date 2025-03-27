@@ -9,7 +9,7 @@ This is my first team project at college which has developed during 13 weeks.
 I had the privilege of collaborating with a talented team of designers and developers as a front-end developer.
 
 ## Main features
-#### Seach Routes:
+#### Search Routes:
 - Users can search routes to a destination on the map. 
 #### Report Road Hazards:
 - Users can report road hazards such as floods or potholes that prevent them from passing through from the map, and also check the latest road conditions on the map to know if any road hazards exist. 
