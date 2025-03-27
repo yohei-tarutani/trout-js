@@ -1,5 +1,5 @@
 # Welcome to trout 👋
-"trout" is a website where citizens can report road hazards such as floods or potholes that prevent them from passing through, then a city government can check those reports and update the status of them when they dealt with the issues so that citizens know the latest road conditions.
+"trout" is a web application where citizens can report road hazards such as floods or potholes that prevent them from passing through, then a city government can check those reports and update the status of them when they dealt with the issues so that citizens know the latest road conditions.
 <br>
 
 ![Image](https://github.com/user-attachments/assets/14279858-64e7-4e72-a70a-508ba1af03ac)
